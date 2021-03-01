@@ -1,6 +1,19 @@
 import { getPlants } from "./services/greenThumbApi";
 
-function createPlantCard(plant) {
+function* gridPlacingsGen() {
+    let row = 1;
+    let column = 1;
+    while(true) {
+        while(column < 5) {
+            yield [`${column} / ${column + 2}`, `${row} / ${row + 2}`];
+            column += 2;
+        }
+        column = 1;
+        row += 2;
+    }
+}
+
+function createPlantCard(plant, gridPlacings) {
     const petIcons = {
         false: "static/icons/pet.svg",
         true: "static/icons/toxic.svg"
@@ -20,6 +33,8 @@ function createPlantCard(plant) {
 
     let plantCard = document.createElement("div");
     plantCard.setAttribute("class", `plant-card${plant.staff_favorite ? " staff-favorite" : ""}`);
+    if(plant.staff_favorite)
+        [plantCard.style.gridColumn, plantCard.style.gridRow] = gridPlacings.next().value;
 
     let staffFavImg = document.createElement("img");
     staffFavImg.setAttribute("class", "staff-fav-icon");
@@ -80,6 +95,7 @@ window.onFiltersChange = async () => {
         plants = resp.data;
     }
 
+    const gridPlacings = gridPlacingsGen();
     const resultsArea = document.querySelector("#results");
     if (plants.length <= 0) {
         resultsArea.querySelector("#no-results-box").style.display = "block";
@@ -87,7 +103,7 @@ window.onFiltersChange = async () => {
     } else {
         const plantDisplay = resultsArea.querySelector("#plant-display");
         while (plantDisplay.firstChild) plantDisplay.lastChild.remove();
-        for (let plant of plants) plantDisplay.appendChild(createPlantCard(plant));
+        for (let plant of plants) plantDisplay.appendChild(createPlantCard(plant, gridPlacings));
         resultsArea.querySelector("#no-results-box").style.display = "none";
         resultsArea.querySelector("#results-box").style.display = "flex";
     }
