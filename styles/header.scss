@@ -1,0 +1,137 @@
+@media only screen and (min-width: 769px) {
+  #header {
+    width: 100%;
+    padding-top: 34.72%;
+
+    background-color: #75bc97;
+
+    position: relative;
+
+    #left-leaves {
+      height: 100%;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    #plantperson {
+      height: 85.6%;
+
+      position: absolute;
+      top: 7.2%;
+      left: 55.55%;
+      z-index: 1;
+    }
+
+    #right-leaves {
+      height: 100%;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+    }
+    
+    #greenthumb-logo {
+      height: 5%;
+
+      position: absolute;
+      top: 11.4%;
+      left: 20%;
+      z-index: 3;
+    }
+
+    #header-phrase {
+      height: 50.4%;
+      width: 27.77%;
+
+      position: absolute;
+      top: 24.8%;
+      left: 20%;
+      z-index: 3;
+
+      font-style: normal;
+      font-weight: bold;
+      font-size: 4.65vw;
+      line-height: 5.9vw;
+
+      color: #ffffff;
+    }
+
+    #arrow-down {
+      height: 7.8%;
+
+      position: absolute;
+      top: 81.4%;
+      left: 20.2%;
+      z-index: 3;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #header {
+    width: 100%;
+    padding-top: 185.31%;
+
+    background-color: #75bc97;
+
+    position: relative;
+
+    #mobile-leaves {
+      width: 100%;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    #mobile-plantperson {
+      width: 86.25%;
+
+      position: absolute;
+      top: 56.32%;
+      left: 6.87%;
+      z-index: 1;
+    }
+
+    #greenthumb-logo {
+      height: 3.37%;
+
+      position: absolute;
+      top: 6.07%;
+      left: 10.93%;
+      z-index: 3;
+    }
+
+    #header-phrase {
+      height: 24.28%;
+      width: 78.43%;
+
+      position: absolute;
+      top: 14.67%;
+      left: 10.93%;
+      z-index: 3;
+
+      font-style: normal;
+      font-weight: bold;
+      font-size: 11.9vw;
+      line-height: 15vw;
+
+      color: #ffffff;
+    }
+
+    #arrow-down {
+      height: 6.57%;
+
+      position: absolute;
+      top: 41.65%;
+      left: 12.5%;
+      z-index: 3;
+    }
+  }
+
+}

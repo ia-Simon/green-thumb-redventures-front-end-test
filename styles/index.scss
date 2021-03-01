@@ -1,0 +1,18 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: green;
+
+  margin: 0;
+}
+
+@media only screen and (min-width: 769px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+}

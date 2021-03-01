@@ -7,11 +7,28 @@
     "start": "parcel index.html --open"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "parcel": "1.12.4"
   },
   "devDependencies": {
     "parcel-bundler": "^1.6.1",
+    "parcel-plugin-static-files-copy": "^2.5.1",
     "sass": "^1.32.8"
+  },
+  "browserslist": [
+    "last 3 and_chr versions",
+    "last 3 chrome versions",
+    "last 3 opera versions",
+    "last 3 ios_saf versions",
+    "last 3 safari versions"
+  ],
+  "staticFiles": {
+    "staticPath": [
+      {
+        "staticPath": "static",
+        "staticOutDir": "static"
+      }
+    ]
   },
   "keywords": []
 }

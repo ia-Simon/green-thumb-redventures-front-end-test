@@ -1,0 +1,298 @@
+@media only screen and (min-width: 769px) {
+  #results {
+    width: 100%;
+
+    background-color: #f2f2f2;
+
+    #no-results-box {
+      width: 100%;
+      padding-top: 22.5%;
+
+      position: relative;
+
+      span {
+        position: absolute;
+        left: 20.13%;
+
+        font-style: normal;
+        color: #a9a9a9;
+
+        &:nth-of-type(1) {
+          top: 22.83%;
+
+          width: 30.69%;
+
+          font-weight: bold;
+          font-size: 2.8vw;
+          line-height: 4vw;
+        }
+
+        &:nth-last-of-type(1) {
+          top: 43.51%;
+
+          width: 15.2%;
+
+          font-weight: normal;
+          font-size: 1.05vw;
+          line-height: 2vw;
+        }
+      }
+
+      img {
+        width: 7.27%;
+
+        position: absolute;
+        top: 16.3%;
+        left: 58.47%;
+      }
+    }
+
+    #results-box {
+      width: 100%;
+      padding-left: 20.13%;
+      padding-top: 17px;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      > #plant-hand {
+        width: 13.73%;
+      }
+
+      > span {
+        margin: 20px 0 50px;
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3.5vw;
+        line-height: 5vw;
+
+        color: #0c261c;
+      }
+
+      > #plant-display {
+        width: 78.25%;
+        
+        display: grid;
+        grid-template-columns: repeat(4, 22.88%);
+        grid-gap: 2.77%;
+
+        > div {
+          padding-top: 116%;
+          
+          border: 1px solid red;
+
+          background-color: #FFFFFF;
+          border-radius: 5px;
+        }
+
+        .favorite-plant-card {          
+        
+        }
+
+        .plant-card {
+          
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #results {
+    width: 100%;
+
+    background-color: #f2f2f2;
+
+    #no-results-box {
+      width: 100%;
+      padding-top: 151.87%;
+
+      position: relative;
+
+      span {
+        position: absolute;
+        left: 10.93%;
+
+        font-style: normal;
+        color: #a9a9a9;
+
+        &:nth-of-type(1) {
+          top: 9.67%;
+
+          width: 78.12%;
+
+          font-weight: bold;
+          font-size: 13.4vw;
+          line-height: 15.5vw;
+        }
+
+        &:nth-last-of-type(1) {
+          top: 35.18%;
+
+          width: 68.43%;
+
+          font-weight: normal;
+          font-size: 4.9vw;
+          line-height: 7vw;
+        }
+      }
+
+      img {
+        width: 26.5%;
+
+        position: absolute;
+        top: 59.6%;
+        left: 33.43%;
+      }
+    }
+
+    #results-box {
+      width: 100%;
+      padding-top: 32px;
+
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      > #plant-hand {
+        width: 45.62%;
+        margin-left: 14.06%;
+      }
+      
+      > span {
+        width: 75.93%;
+        margin: 16px 0 16px 14.06%;
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12.2vw;
+        line-height: 15.5vw;
+
+        color: #0c261c;
+      }
+
+      > #plant-display {
+        width: 91.57%;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        margin-left: 8.43%;
+
+        overflow: scroll;
+        
+        > .plant-card {
+          width: 80vw;
+          padding-top: 100vw;
+          flex-shrink: 0;
+
+          position: relative;
+
+          overflow: hidden;
+
+          background-color: #FFFFFF;
+          border-radius: 5px;
+          margin-right: 5vw;
+
+
+          > img.staff-fav-icon {
+            display: none;
+          }
+
+          &.staff-favorite > img.staff-fav-icon {
+            height: 10.16%;
+
+            display: block;
+
+            position: absolute;
+            top: 6.25%;
+            left: 0;
+            z-index: 1;
+          }
+        
+          > img.plant-image {
+            height: 69.06%;
+
+            position: absolute;
+            top: 7.81%;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          > span {
+            position: absolute;
+            left: 8.13%;
+
+            font-style: normal;
+            font-weight: bold;
+            font-size: 4.7vw;
+            line-height: 7vw;
+
+            color: #1E6B4E;
+
+            &.plant-name {
+              width: 62.01%;
+              bottom: 14%;
+            }
+            &.plant-price {
+              width: 22.86%;
+              bottom: 6%;
+            }
+          }
+
+          > img {
+            height: 6.25%;
+
+            position: absolute;
+            bottom: 6.25%;
+            
+            &.pet-icon {
+              right: 27.5%;
+            }
+            &.sun-icon {
+              left: 75%;
+            }
+            &.water-icon {
+              left: 86%;
+            }
+          }
+        }
+      }
+
+      > #back-to-top {
+        width: 88.12%;
+        height: 50px;
+        margin: 32px auto 22px;
+        padding-left: 20%;
+
+        cursor: pointer;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        border: 1px solid #15573F;
+        border-radius: 25px;
+
+        > span {
+          padding-left: 16.4%;
+
+          font-style: normal;
+          font-weight: 300;
+          font-size: 4.5vw;
+          line-height: 20px;
+
+          color: #196146;
+        }
+      }
+    }
+  }
+}
