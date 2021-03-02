@@ -69,6 +69,12 @@
       top: 81.4%;
       left: 20.2%;
       z-index: 3;
+
+      transition: filter 0.3s;
+
+      &:hover {
+        filter: brightness(0.7);
+      }
     }
   }
 }
@@ -135,6 +141,12 @@
       top: 41.65%;
       left: 12.5%;
       z-index: 3;
+
+      transition: filter 0.3s;
+
+      &:hover {
+        filter: brightness(0.7);
+      }
     }
   }
 
