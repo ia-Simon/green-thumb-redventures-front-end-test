@@ -23,7 +23,10 @@
       <img src="static/hero/desktop/right-leaves.png" alt="" id="right-leaves" class="desktop-only" />
       <img src="static/hero/mobile/mobile-leaves.png" alt="" id="mobile-leaves" class="mobile-only"/>
       <img src="static/hero/mobile/mobile-plantperson.png" alt="" id="mobile-plantperson" class="mobile-only">
-      <img src="static/icons/arrow-down.svg" alt="" id="arrow-down" onclick="scrollToFiltersArea('down')"/>
+      <img 
+        src="static/icons/arrow-down.svg" alt="" id="arrow-down" 
+        onclick="document.querySelector('#filters').scrollIntoView({behavior: 'smooth', block: 'start'})"
+      />
       <span id="header-phrase">Find your next green friend</span>
     </div>
     <div id="filters">
@@ -69,7 +72,10 @@
         <div id="plant-display">
           <!-- Plant Cards dinamically inserted here. -->
         </div>
-        <button id="back-to-top" onclick="scrollToFiltersArea('up')">
+        <button 
+          id="back-to-top" 
+          onclick="document.querySelector('#filters').scrollIntoView({behavior: 'smooth', block: 'start'})"
+        >
           <img src="static/icons/arrow-up.svg" alt="" />
           <span>back to the top</span>
         </button>

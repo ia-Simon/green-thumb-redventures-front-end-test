@@ -108,34 +108,3 @@ window.onFiltersChange = async () => {
         resultsArea.querySelector("#results-box").style.display = "flex";
     }
 }
-
-
-window.scrollToFiltersArea = async (direction) => {
-    const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-    const scrollFactor = 50;
-    const smoothScrollY = {
-        up: async (position) => {
-            let delta  = window.pageYOffset - position;
-            while(window.pageYOffset > position) {
-                let jump = Math.ceil(((window.pageYOffset - position) / delta) * scrollFactor);
-                window.scrollBy(0, - jump);
-                await sleep(1);
-            }
-        },
-        down: async (position) => {
-            let delta = position - window.pageYOffset;
-            while(window.pageYOffset < position) {
-                let jump = Math.ceil(((position - window.pageYOffset) / delta) * scrollFactor);
-                window.scrollBy(0, jump);
-                await sleep(1);
-            }
-        }
-    }
-    if (window.innerWidth <= 768)
-        await smoothScrollY[direction](1.8531 * window.innerWidth);
-    else
-        await smoothScrollY[direction](0.3472 * window.innerWidth);
-}
-
-
-
